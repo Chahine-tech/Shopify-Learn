@@ -188,7 +188,7 @@
     </div>
 
   </div>
-
+{% comment %} test {% endcomment %}
   <script type="application/json" data-cart-routes>
     {
       "cartUrl": "{{ routes.cart_url }}",
@@ -216,5 +216,6 @@
      </div>
     </div>
    </div>
+   {% assign somearray = "one two three" | split: ' ' %}
 </body>
 </html>
