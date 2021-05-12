@@ -6,10 +6,89 @@
          <img src="https://miro.medium.com/max/2952/1*dJtXMtfOdRjl5mtyAnlahw.png" alt="" class="img" />
          <div class="modal-title">Avertissement</div>
          <p>
-           test pop-up
+           FAQ t'as capté
          </p>           
-         <a href="url-lien" class="modal-btn">En savoir plus</a>
+         <a href="https://chahinetest.myshopify.com/pages/faq" class="modal-btn">En savoir plus</a>
        </div>
      </div>
     </div>
    </div>
+   {% schema %}
+  {
+    "name": "Pop-up",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+.dg-popup #dg-popup-modal {
+  display: none; 
+  position: fixed; 
+  z-index: 9999999; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.7); 
+}
+.dg-popup .modal-content {
+  background-color: #fefefe;
+  text-align:center;
+  margin: 5% auto; 
+  padding: 15px;
+  position:relative;
+  heigth:100%;
+  max-width: 800px;
+  min-height:300px;
+}
+.dg-popup .img { max-width:100%; margin:0 auto 20px auto; }
+.dg-popup .modal-title {
+  text-transform:uppercase;
+  font-size:24px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+.dg-popup .modal-text {
+ padding:35px; 
+}
+.dg-popup .modal-btn {
+  background:#FF6600;
+  color:#FFF;
+  display:inline-block;
+  padding:10px 15px;
+  margin:10px auto 0 auto;
+}
+.dg-popup .modal-btn:hover,
+.dg-popup .modal-btn:focus {
+  opacity:0.9;
+  color:#FFF;
+}
+.dg-popup .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  padding:10px;
+  font-weight: bold;
+  position: absolute;
+  top: -10px;
+  right: 0px;
+}
+.dg-popup .close:hover,
+.dg-popup .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .dg-popup .modal-content  {
+    margin:5px;
+    
+  }
+}
+{% endstylesheet %}
+
+{% javascript %}
+
+{% endjavascript %}
