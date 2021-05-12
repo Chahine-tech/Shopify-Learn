@@ -140,9 +140,9 @@
           </a>
 
           <div>
-            <a href="{{routes.account_login_url}}">
+            <button onclick='toggleModal("mapopup")'>
               {% include 'icon-login' %}
-            </a>
+            </button>
           </div>
 
           {% unless linklists[section.settings.main_linklist] == blank %}

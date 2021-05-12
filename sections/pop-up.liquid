@@ -1,14 +1,30 @@
-<div class="dg-popup">    
+
+<div id="mapopup" class="dg-popup hidden">    
     <div id="dg-popup-modal">     
      <div class="modal-content">
-       <div class="close">×</div>
+       <div onclick='toggleModal("mapopup")' class="close">×</div>
        <div class="modal-text">
-         <img src="https://miro.medium.com/max/2952/1*dJtXMtfOdRjl5mtyAnlahw.png" alt="" class="img" />
-         <div class="modal-title">Avertissement</div>
-         <p>
-           FAQ t'as capté
-         </p>           
-         <a href="https://chahinetest.myshopify.com/pages/faq" class="modal-btn">En savoir plus</a>
+         <img src="https://gazenergie.ch/fileadmin/_processed_/b/e/csm_Login_c148e8b0a7.png" alt="" class="img" style="width: 100px" />
+         <div class="modal-title">Sign In</div>
+         <form action="action_page.php" method="post">
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+        
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+        
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="modal-btn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>        
+         <a href="https://chahinetest.myshopify.com/pages/faq" class="modal-btn">Login</a>
        </div>
      </div>
     </div>
@@ -21,8 +37,11 @@
 {% endschema %}
 
 {% stylesheet %}
+.hidden {
+  display: none;
+
+}
 .dg-popup #dg-popup-modal {
-  display: none; 
   position: fixed; 
   z-index: 9999999; 
   left: 0;
@@ -54,7 +73,7 @@
  padding:35px; 
 }
 .dg-popup .modal-btn {
-  background:#FF6600;
+  background:#786c56;
   color:#FFF;
   display:inline-block;
   padding:10px 15px;
@@ -89,6 +108,3 @@
 }
 {% endstylesheet %}
 
-{% javascript %}
-
-{% endjavascript %}

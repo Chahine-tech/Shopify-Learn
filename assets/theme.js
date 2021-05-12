@@ -9685,3 +9685,6 @@ function removeImageLoadingAnimation(image) {
     imageWrapper.removeAttribute('data-image-loading-animation');
   }
 }
+function toggleModal(modalID){
+  document.getElementById(modalID).classList.toggle("hidden");
+}
