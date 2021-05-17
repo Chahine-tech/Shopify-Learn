@@ -6996,7 +6996,30 @@ hr {
 
 .store-availability-list__phone {
   margin-bottom: 0; }
-
+.test{
+  font-style: italic;
+  font-size: 100%;
+}
 .profil {
   text-align: center;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  padding : 1em;
+}
+.menu > a {
+  margin-bottom: .5rem;
+  border-top: 1px solid #000;
+  width : 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  vertical-align: middle;
+  transition: color .3s;
+}
+.menu a:hover{
+  color:burlywood;
 }
